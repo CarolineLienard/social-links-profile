@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
 
+type TextProps = { $textColor?: string };
+
 // Responsive
 enum Breakpoints {
   mobile = "375px",
@@ -22,24 +24,21 @@ export const colors = {
 // Typography
 export const pxToRem = (pxValue: number) => `${pxValue / 16}rem`;
 
-const baseTextStyle = css<{$textColor?: string }>`
-  color: ${props => props.$textColor || colors.white};
+const baseTextStyle = css<TextProps>`
+  color: ${(props) => props.$textColor || colors.white};
   font-size: ${pxToRem(14)};
   letter-spacing: 0px;
   line-height: 150%;
 `;
-
-export const MainHeading = styled.h1<{ $textColor?: string }>`
+export const MainHeading = styled.h1<TextProps>`
   ${baseTextStyle}
   font-size: ${pxToRem(24)};
   font-weight: 700;
 `;
-
-export const RegularText = styled.p<{$textColor?: string }>`
+export const RegularText = styled.p<TextProps>`
   ${baseTextStyle}
 `;
-
-export const BoldText = styled.p<{$textColor?: string }>`
+export const BoldText = styled.p<TextProps>`
   ${baseTextStyle}
   font-weight: 700;
 `;
