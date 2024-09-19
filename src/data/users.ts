@@ -31,14 +31,14 @@ export const users: User[] = [
       },
       {
         network: "Frontend Mentor",
-        url: "https://Frontendmentor.com/",
+        url: "https://www.frontendmentor.io/",
       },
       {
         network: "Linkedin",
         url: "https://linkedin.com/",
       },
       {
-        network: "LinkedIn",
+        network: "Twitter",
         url: "https://twitter.com/",
       },
       {

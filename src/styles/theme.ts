@@ -42,3 +42,13 @@ export const BoldText = styled.p<TextProps>`
   ${baseTextStyle}
   font-weight: 700;
 `;
+
+// Spacing 
+export const spacing = {
+  spacing500: pxToRem(40),
+  spacing300: pxToRem(24),
+  spacing200: pxToRem(16),
+  spacing150: pxToRem(12),
+  spacing100: pxToRem(8),
+  spacing50: pxToRem(4),
+};
