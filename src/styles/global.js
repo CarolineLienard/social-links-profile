@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import Inter from "../assets/fonts/inter.ttf"
+import { colors } from "./theme";
 
 export const GlobalStyles = createGlobalStyle`
   @font-face {
@@ -18,6 +19,10 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     font-family: 'Inter', sans-serif;
+    background: ${colors.grey900};
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
   }
   img, svg {
     display: block;
