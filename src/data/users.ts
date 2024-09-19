@@ -1,15 +1,19 @@
+// Fake data to simulate an API
+import profile from "../assets/images/jessica.jpeg";
+
 export type SocialLink = {
   network: string;
-  url: string; 
+  url: string;
 };
 
 export type User = {
-  firstName: string; 
-  lastName: string; 
+  firstName: string;
+  lastName: string;
   city: string;
-  country: string; 
-  description: string; 
-  socialLinks: SocialLink[]; 
+  country: string;
+  description: string;
+  profile: string;
+  socialLinks: SocialLink[];
 };
 
 export const users: User[] = [
@@ -19,6 +23,7 @@ export const users: User[] = [
     city: "London",
     country: "United Kingdom",
     description: "Front-end developer and avid reader",
+    profile: profile,
     socialLinks: [
       {
         network: "Github",
