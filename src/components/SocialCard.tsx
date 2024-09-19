@@ -16,7 +16,7 @@ const Card = styled.div`
   text-align: center;
   gap: ${spacing.spacing300};
   padding: ${spacing.spacing500};
-  max-width: ${pxToRem(380)};
+  width: ${pxToRem(380)};
   background: ${colors.grey800};
   border-radius: 12px;
 `;
