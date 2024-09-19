@@ -1,18 +1,20 @@
 import { MainHeading } from './styles/theme';
 import { colors } from './styles/theme';
 import { User, users } from './data/users';
+import Avatar from './components/Avatar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <main className="App">
         {users.map((user: User, index: number) => (
-          <MainHeading key={index} $textColor={colors.green}>
-            {user.firstName} {user.lastName} {user.city}
-          </MainHeading>
+          <div key={index}>
+            <Avatar profilePicture={user.profile} />
+            <MainHeading $textColor={colors.green}>
+              {user.firstName} {user.lastName} {user.city}
+            </MainHeading>
+          </div>
         ))}
-      </header>
-    </div>
+    </main>
   );
 }
 
