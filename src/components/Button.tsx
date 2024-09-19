@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors, BoldText, spacing } from "../styles/theme";
 
-const StyledButton = styled.button`
+const StyledButton = styled.a`
   padding: ${spacing.spacing150};
   background-color: ${colors.grey700};
   border: none;
@@ -25,10 +25,8 @@ export default function Button({
   link: string;
 }) {
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer">
-      <StyledButton>
-        <BoldText>{label}</BoldText>
-      </StyledButton>
-    </a>
+    <StyledButton href={link} target="_blank" rel="noopener noreferrer">
+      <BoldText>{label}</BoldText>
+    </StyledButton>
   );
 }
