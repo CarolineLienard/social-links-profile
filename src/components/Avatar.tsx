@@ -13,12 +13,10 @@ const ProfileImage = styled.img`
   height: 100%;
 `;
 
-function Avatar({ profilePicture } : { profilePicture : string}) {
+export default function Avatar({ profilePicture } : { profilePicture : string}) {
   return (
     <AvatarContainer>
       <ProfileImage src={profilePicture} alt="Avatar" />
     </AvatarContainer>
   );
 }
-
-export default Avatar;
