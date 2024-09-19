@@ -2,11 +2,12 @@ import styled from "styled-components";
 import { colors, BoldText, spacing } from "../styles/theme";
 
 const StyledButton = styled.button`
-  padding: ${spacing.spacing100} ${spacing.spacing150};
+  padding: ${spacing.spacing150};
   background-color: ${colors.grey700};
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  width: 100%;
   transition: background-color 0.8s;
   &:hover {
     background-color: ${colors.green};
